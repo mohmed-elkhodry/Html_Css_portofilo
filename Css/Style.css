@@ -3,7 +3,6 @@ body {
     padding: 0;
     background-color: var(--minor-bg);
     width: 100%;
-    height: 3000px;
 }
 * {
     box-sizing: border-box;
@@ -81,6 +80,7 @@ body {
     -moz-transition: 0.5s;
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
+    text-decoration: none;
 }
 section {
     padding-top: 30px;
@@ -431,7 +431,6 @@ header ul li a:hover {
     gap:15px;
     justify-content: space-around;
     padding-bottom: 50px;
-    margin-left: 8px;
 }
 .ser {
     text-align: center;
@@ -521,6 +520,7 @@ header ul li a:hover {
     justify-content: center;
     gap: 10px;
 }
+
 .port-content > div {
     background-color: #eee;
     color: black;
@@ -588,5 +588,179 @@ header ul li a:hover {
     -ms-transform: translateY(50%);
     -o-transform: translateY(50%);
 }
+@media (max-width: 620px) {
+    .port-content {
+        flex-wrap: nowrap;
+        height: auto;
+    }
+    .port-content div {
+        width: 90%;
+    }
+    .port-content div:nth-child(3) {
+        height: 200px;
+    }
+    .port-content div:nth-child(3):hover .overlay {
+        bottom: 0px;
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+    }
+    .overlay {
+        visibility: visible;
+        visibility: visible;
+        bottom: 0px;
+        height: 15px;
+        width: 100% !important;
+        padding: 15px;
+        text-align: center;
+    }
+
+}
 
 /* End portofilo section */
+/* Start Contact section */
+.contct {
+    background-color: var(--secondary-bg);
+    height: 1000px;
+}
+.contct_container {
+    background-color: var(--minor-bg);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 40px;
+}
+
+.card-contact {
+    background-color: var(--main-bg);
+    width: 37%;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    padding: 40px;
+    position: relative;
+}
+.card-contact::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-top-right-radius:0;
+    border-top-left-radius:100%;
+    border-bottom-right-radius:15px;
+    border-bottom-left-radius:0;
+    background: var(--color);
+    right: 0;
+    bottom: 0;
+}
+.card-contact::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: var(--minor-bg);
+    bottom: 30px;
+    right: 40px;
+    z-index: 3;
+    animation-name: trans;
+    animation-duration: 1.5s;
+    -webkit-animation-name: trans;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.card-contact h3 {
+    margin-bottom: 15px;
+}
+.card-contact p {
+    color: var(--p-color);
+    margin-bottom: 60px;
+    font-size: 15px;
+}
+.contact-info div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+.contact-info i {
+    color: var(--color);
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+.contact-info span {
+    font-size: 14px;
+    color: var(--p-color);
+}
+.social {
+    margin-top: 100px;
+}
+.social i {
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    font-size: 20px;
+    margin-left: 5px;
+    padding: 2px;
+}
+.social i:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    cursor: pointer;
+    background-color: var(--color);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+.form-contact {
+    width: 63%;
+}
+.form-contact label {
+    color: var(--p-color);
+}
+.form-contact form {
+    width: 100%;
+}
+form .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+form .row label {
+    display: block;
+}
+.check-ser  label:first-of-type {
+    display: block;
+    text-align: center;
+}
+/* End Contact section */
+
+/* start footer */
+footer {
+    background-color: var(--main-bg);
+    text-align: center;
+    padding: 10px;
+}
+footer div span {
+    color: var(--color);
+}
+/* End footer */
